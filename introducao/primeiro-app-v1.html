@@ -1,0 +1,23 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+
+<div id="app">
+    <p>
+        {{ title }}
+    </p>
+    <input type="text" name="" id="" v-on:input="alterarTitle">
+</div>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            title: 'Usando vue.js'
+        },
+        methods: {
+            alterarTitle(e) {
+                this.title = e.target.value;
+            }
+        }
+    })
+</script>
